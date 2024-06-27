@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>P5Intsy</title>
+</head>
+<body>
+
+    
+    <div class = "container">
+        <div class="title">MAZE ALGORITHM VISUALIZER</div>
+        <!-- Existing dropdown for selecting algorithm -->
+        <div class="dropdown">
+            <label for="algorithm">Select Algorithm:</label>
+            <select id="algorithm">
+                <option value="bfs">BFS</option>
+                <option value="dfs">DFS</option>
+                <option value="astar">A* Search</option>
+                <option value="gbfs">Greedy Best First Search</option>
+                <option value="trueRandomWalk">True Random Walk</option>
+            </select>
+        </div>
+        <div class="maze-controls">
+            <div class = "maze-buttons">
+                <label for="mazeSize">Maze size (n x n):</label>
+                <input type="number" id="mazeSize" min="2" value="10">
+                <button id="generate">Generate Maze</button>
+                <button id="punchHoles">Punch Holes</button>
+                <button id="play">Play</button>
+            <br><br>
+            </div>
+            <div class = "maze-modifications">
+                <label for="cellX">Enter cell:</label>
+                <div class = "number">
+                    <input type="number" id="cellX" placeholder="X Coordinate">
+                    <input type="number" id="cellY" placeholder="Y Coordinate">
+                </div>
+            </div>
+            <div class = "maze-modifications-2">
+                <br><br>
+                <label>Modify Walls:</label>
+                <input type="checkbox" id="northWall"> North
+                <input type="checkbox" id="eastWall"> East
+                <input type="checkbox" id="southWall"> South
+                <input type="checkbox" id="westWall"> West
+                <br>
+                <button id="updateCell">Update Cell</button>
+            </div> <!-- Spacing -->
+            
+        </div>
+    </div>
+   
+    <script src="node_modules/p5/lib/p5.js"></script>
+    <script type="module" src="maze.js"></script>
+</body>
+</html>
